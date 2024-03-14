@@ -6,13 +6,13 @@ import (
 	"log"
 )
 
-// type Database struct {
-// 	db *sql.DB
-// }
+type Database struct {
+	db *sql.DB
+}
 
-// func NewDatabaseInstace() *Database {
-// 	return &Database{ openDatabase()}
-// }
+func NewDatabaseInstace() *Database {
+	return &Database{DatabaseInstance()}
+}
 
 func DatabaseInstance() *sql.DB {
 	databaseSource := "root:emon@123@tcp(localhost:3306)/jwt-using-gin-gonic"
